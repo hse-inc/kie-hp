@@ -1,0 +1,65 @@
+:root {
+  
+  --c-base: #ffffff;
+  --c-sub: #fce2c5;
+  --c-sub-deep: #f7d3ab;
+  --c-accent: #ff9596;
+  --c-ink: #2e2724;
+  --c-ink-soft: #5b4f49;
+  --c-line: #eadbcb;
+  --c-dark: #2e2724;
+  --c-dark-text: #fff7ef;
+  --c-dark-ghost: #46392f;
+
+  
+  --ff-en: "Jost", sans-serif;
+  --ff-head: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
+  --ff-body: "Noto Sans JP", sans-serif;
+
+  
+  --fs-en: 40px;
+  --fs-head: 22px;
+  --fs-sub: 17px;
+  --fs-body: 14px;
+  --fs-small: 13px;
+  --fs-nav: 14px;
+  --fw-body: 400;
+  --lh-head: 1.4;
+  --lh-body: 1.8;
+  --ls-head: 0.05em;
+  --ls-body: 0.05em;
+
+  
+  --sp-1: 8px;
+  --sp-p: 20px;
+  --sp-g: 40px;
+  --sec-y: 96px;
+  --gutter: 20px;
+  --wrap: 1000px;
+
+  
+  --header-h: 72px;
+  --btn-circle: 46px;
+  --radius-s: 8px;
+  --radius-l: 24px;
+
+  
+  --ease: cubic-bezier(0.4, 0.4, 0, 1);
+  --dur-rv: 0.6s;
+  --dur-intro: 1.4s;
+  --marquee-pxs: 40;
+}
+
+@media (min-width: 960px) {
+  :root {
+    --fs-en: 57px;
+    --fs-head: 34px;
+    --fs-sub: 24px;
+    --fs-body: 16px;
+    --sp-g: 56px;
+    --sec-y: 160px;
+    --gutter: 48px;
+    --header-h: 96px;
+    --btn-circle: 66px;
+  }
+}
