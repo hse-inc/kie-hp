@@ -61,24 +61,4 @@
     if (e.isIntersecting) { e.target.classList.add('is-on'); ioHanko.unobserve(e.target); }
   }), { rootMargin: '0px 0px -15% 0px' });
   document.querySelectorAll('.hanko').forEach((el) => ioHanko.observe(el));
-
-  const lines = { fv: 'ようこそ、喜江建設へ！', about: 'ぼくらの町の会社です', service: 'こんな工事をしています', company: '会社のこと、見てってね', recruit: '仲間を募集中！', partner: 'いつもありがとう！' };
-  const g = document.createElement('div');
-  g.className = 'guide'; g.setAttribute('aria-hidden', 'true');
-  g.innerHTML = '<p class="guide__bubble"></p><img class="guide__dog" src="assets/chara_dog.webp?v=20261025c" alt="">';
-  document.body.append(g);
-  const bubble = g.querySelector('.guide__bubble'), dog = g.querySelector('.guide__dog');
-  const say = (key) => {
-    if (!lines[key] || bubble.textContent === lines[key]) return;
-    bubble.textContent = lines[key];
-    bubble.classList.remove('is-new'); dog.classList.remove('is-hop');
-    void bubble.offsetWidth;
-    bubble.classList.add('is-new'); dog.classList.add('is-hop');
-    clearTimeout(say.t);
-    say.t = setTimeout(() => bubble.classList.remove('is-new'), 3500);
-  };
-  say('fv');
-  const keyOf = (el) => (el.classList.contains('fv') ? 'fv' : el.id);
-  const ioGuide = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) say(keyOf(e.target)); }), { rootMargin: '-45% 0px -45% 0px' });
-  document.querySelectorAll('main > .fv, main > .sec').forEach((el) => ioGuide.observe(el));
 })();
