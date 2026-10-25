@@ -31,9 +31,12 @@
   --ls-body: 0.05em;
 
   
+  
   --sp-1: 8px;
-  --sp-p: 20px;
-  --sp-g: 40px;
+  --sp-p: 16px;
+  --sp-b: 32px;
+  --sp-g: 48px;
+  --sp-s: 80px;
   --sec-y: 96px;
   --gutter: 20px;
   --wrap: 1000px;
@@ -57,7 +60,10 @@
     --fs-head: 34px;
     --fs-sub: 24px;
     --fs-body: 16px;
-    --sp-g: 56px;
+    --sp-p: 20px;
+    --sp-b: 40px;
+    --sp-g: 64px;
+    --sp-s: 120px;
     --sec-y: 160px;
     --gutter: 48px;
     --header-h: 96px;
@@ -73,7 +79,10 @@
     --fs-sub: 28px;
     --fs-body: 18px;
     --fs-nav: 16px;
-    --sp-g: 72px;
+    --sp-p: 24px;
+    --sp-b: 48px;
+    --sp-g: 80px;
+    --sp-s: 160px;
     --sec-y: 200px;
     --gutter: 72px;
     --wrap: 84vw;

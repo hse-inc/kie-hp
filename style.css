@@ -85,11 +85,11 @@
 }
 
 .about { background: color-mix(in srgb, var(--c-sub) 35%, var(--c-base)); }
-.about__grid { display: grid; gap: var(--sp-g); }
+.about__grid { display: grid; gap: var(--sp-s); }
 .about__body { display: grid; gap: var(--sp-g); justify-items: start; }
 .about__body .txt { max-width: 36em; }
 
-.about__body > .btn-circle, .service__head > .btn-circle, .company__body > .btn-circle, .partner__body > .btn-circle { margin-top: calc(var(--sp-p) - var(--sp-g)); }
+.about__body > .btn-circle, .service__head > .btn-circle, .company__body > .btn-circle { margin-top: calc(var(--sp-b) - var(--sp-g)); }
 .venn {
   position: relative;
   order: 2;
@@ -173,7 +173,7 @@
 .venn__circle.rv.is-on { animation: venn-pop 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) var(--rv-delay, 0s) both; }
 @keyframes venn-pop { from { opacity: 0; transform: scale(0.4); } to { opacity: 1; transform: none; } }
 
-.service__grid { display: grid; gap: var(--sp-g); }
+.service__grid { display: grid; gap: var(--sp-s); }
 .service__head { display: grid; gap: var(--sp-g); justify-items: start; align-content: start; }
 .media-list { display: grid; }
 .media {
@@ -205,16 +205,16 @@
 @keyframes cone-sway { from { rotate: -6deg; } to { rotate: 6deg; } }
 
 @media (max-width: 959px) {
-  .venn { aspect-ratio: 1 / 1.1; }
-  .venn__item--top { top: 26%; }
-  .venn__item--l, .venn__item--r { top: 60%; }
-  .venn__chara--top { width: 40%; top: -32%; margin-left: -20%; }
+  .venn { aspect-ratio: 1 / 1.02; }
+  .venn__item--top { top: 20%; }
+  .venn__item--l, .venn__item--r { top: 54%; }
+  .venn__chara--top { width: 32%; top: -19%; margin-left: -16%; }
   
   .venn { width: 92%; }
   .venn__chara--l { width: 40%; left: -12%; top: 72%; }
   .venn__chara--r { width: 40%; right: -12%; top: 76%; }
   .venn__note { max-width: 46%; letter-spacing: 0; }
-  .venn__arrow { top: 15%; }
+  .venn__arrow { top: 12%; }
 }
 
 @media (min-width: 960px) {
@@ -227,7 +227,7 @@
 }
 
 .company { background: color-mix(in srgb, var(--c-sub) 35%, var(--c-base)); }
-.company__grid { display: grid; gap: var(--sp-g); }
+.company__grid { display: grid; gap: var(--sp-s); }
 .company__body { display: grid; gap: var(--sp-g); justify-items: start; }
 .info-table { width: 100%; margin: 0; border-top: 1px solid var(--c-line); }
 .info-table__row { display: grid; grid-template-columns: 6em 1fr; gap: var(--sp-p); padding-block: 16px; border-bottom: 1px solid var(--c-line); }
@@ -344,7 +344,7 @@
 
 .partner { background: color-mix(in srgb, var(--c-sub) 35%, var(--c-base)); }
 .partner__grid { display: grid; gap: var(--sp-g); }
-.partner__body { display: grid; gap: var(--sp-g); justify-items: start; }
+.partner__body { display: grid; gap: var(--sp-b); justify-items: start; }
 .partner__list { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; width: 100%; }
 .partner__list li {
   padding: 14px 16px;
