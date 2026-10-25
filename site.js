@@ -16,6 +16,23 @@
     drawer.addEventListener('click', (e) => { if (e.target.closest('a')) set(false); });
   }
 
+  document.querySelectorAll('[data-split]').forEach((el) => {
+    let i = 0;
+    const walk = (node) => [...node.childNodes].forEach((c) => {
+      if (c.nodeType === 3) {
+        const frag = document.createDocumentFragment();
+        [...c.textContent].forEach((t) => {
+          if (!t.trim()) { frag.append(t); return; }
+          const s = document.createElement('span');
+          s.className = 'ch'; s.textContent = t; s.style.setProperty('--i', i++);
+          frag.append(s);
+        });
+        c.replaceWith(frag);
+      } else if (c.nodeType === 1 && c.tagName !== 'svg') walk(c);
+    });
+    walk(el);
+  });
+
   const io = new IntersectionObserver((entries) => {
     entries.forEach((en) => {
       if (!en.isIntersecting) return;
@@ -34,4 +51,32 @@
   });
   document.fonts.ready.then(fit);
   window.addEventListener('resize', fit);
+
+  document.querySelectorAll('main > .sec .sec-head__en').forEach((head) => {
+    const h = document.createElement('span');
+    h.className = 'hanko'; h.setAttribute('aria-hidden', 'true'); h.textContent = '喜江';
+    head.append(h);
+  });
+  const ioHanko = new IntersectionObserver((es) => es.forEach((e) => {
+    if (e.isIntersecting) { e.target.classList.add('is-on'); ioHanko.unobserve(e.target); }
+  }), { rootMargin: '0px 0px -15% 0px' });
+  document.querySelectorAll('.hanko').forEach((el) => ioHanko.observe(el));
+
+  const lines = { fv: 'ようこそ、喜江建設へ！', about: 'ぼくらの町の会社です', service: 'こんな工事をしています', company: '会社のこと、見てってね', recruit: '仲間を募集中！', partner: 'いつもありがとう！' };
+  const g = document.createElement('div');
+  g.className = 'guide'; g.setAttribute('aria-hidden', 'true');
+  g.innerHTML = '<p class="guide__bubble"></p><img class="guide__dog" src="assets/chara_dog.webp?v=20261025b" alt="">';
+  document.body.append(g);
+  const bubble = g.querySelector('.guide__bubble'), dog = g.querySelector('.guide__dog');
+  const say = (key) => {
+    if (!lines[key] || bubble.textContent === lines[key]) return;
+    bubble.textContent = lines[key];
+    bubble.classList.remove('is-new'); dog.classList.remove('is-hop');
+    void bubble.offsetWidth;
+    bubble.classList.add('is-new'); dog.classList.add('is-hop');
+  };
+  say('fv');
+  const keyOf = (el) => (el.classList.contains('fv') ? 'fv' : el.id);
+  const ioGuide = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) say(keyOf(e.target)); }), { rootMargin: '-45% 0px -45% 0px' });
+  document.querySelectorAll('main > .fv, main > .sec').forEach((el) => ioGuide.observe(el));
 })();

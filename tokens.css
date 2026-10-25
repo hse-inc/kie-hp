@@ -10,6 +10,7 @@
   --c-dark: #2e2724;
   --c-dark-text: #fff7ef;
   --c-dark-ghost: #46392f;
+  --c-stamp: #e8636a;
 
   
   --ff-en: "Jost", sans-serif;
@@ -61,5 +62,32 @@
     --gutter: 48px;
     --header-h: 96px;
     --btn-circle: 66px;
+    --wrap: 86vw;
+  }
+}
+
+@media (min-width: 1600px) {
+  :root {
+    --fs-en: 76px;
+    --fs-head: 42px;
+    --fs-sub: 28px;
+    --fs-body: 18px;
+    --fs-nav: 16px;
+    --sp-g: 72px;
+    --sec-y: 200px;
+    --gutter: 72px;
+    --wrap: 84vw;
+    --header-h: 112px;
+    --btn-circle: 80px;
+  }
+}
+@media (min-width: 2200px) {
+  :root {
+    --fs-en: 96px;
+    --fs-head: 52px;
+    --fs-sub: 32px;
+    --fs-body: 20px;
+    --wrap: 82vw;
+    --btn-circle: 92px;
   }
 }
