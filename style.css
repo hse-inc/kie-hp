@@ -275,19 +275,6 @@
   background: var(--c-base);
   font-size: var(--fs-small);
 }
-.dog-frame__tag {
-  position: absolute;
-  top: 8%;
-  left: -8%;
-  padding: 4px 14px;
-  border-radius: 999px;
-  background: var(--c-accent);
-  font-family: var(--ff-en);
-  font-weight: 600;
-  font-size: var(--fs-small);
-  letter-spacing: 0.1em;
-  rotate: -8deg;
-}
 
 .recruit-card {
   position: relative;
