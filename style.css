@@ -3,7 +3,7 @@
   isolation: isolate;
   display: grid;
   align-content: center;
-  padding: calc(var(--header-h) + 24px) var(--gutter) 56px;
+  padding: calc(var(--header-h) + 24px) var(--gutter) 24px;
   overflow: hidden;
 }
 
@@ -23,13 +23,10 @@
 }
 .fv__stage { position: relative; display: grid; justify-items: center; }
 .fv__en {
-  position: absolute;
-  top: 2%;
-  left: 50%;
-  translate: -50% 0;
+  margin-bottom: 6px;
   font-family: var(--ff-en);
   font-weight: 600;
-  font-size: clamp(34px, 9vw, 120px);
+  font-size: 9.4vw;
   line-height: 1;
   white-space: nowrap;
   color: var(--c-sub);
@@ -75,19 +72,10 @@
   line-height: 1.6;
   letter-spacing: var(--ls-head);
 }
-.fv__tag {
-  display: inline-block;
-  margin-bottom: var(--sp-1);
-  padding: 0 10px;
-  border: 1px solid var(--c-ink);
-  border-radius: 999px;
-  font-family: var(--ff-en);
-  font-weight: 600;
-  font-size: var(--fs-small);
-  letter-spacing: 0.1em;
-}
+
 @media (min-width: 960px) {
-  .fv { min-height: 100svh; }
+  .fv { min-height: 100svh; padding-bottom: 56px; }
+  .fv__en { position: absolute; top: 2%; left: 50%; translate: -50% 0; margin: 0; font-size: clamp(34px, 9vw, 120px); }
   .fv__catch { translate: 18% 0; }
   .fv__catch svg { width: 64px; }
   .fv__copy { position: absolute; left: var(--gutter); bottom: 56px; margin: 0; font-size: 20px; }
@@ -230,6 +218,16 @@
   animation: cone-sway 3.6s ease-in-out infinite alternate;
 }
 @keyframes cone-sway { from { rotate: -6deg; } to { rotate: 6deg; } }
+
+@media (max-width: 959px) {
+  .venn { aspect-ratio: 1 / 1.1; }
+  .venn__item--top { top: 26%; }
+  .venn__item--l, .venn__item--r { top: 60%; }
+  .venn__chara--top { width: 50%; top: -28%; margin-left: -25%; }
+  .venn__note { max-width: 46%; letter-spacing: 0; }
+  .venn__arrow { top: 15%; }
+  .venn__core { top: 65%; }
+}
 
 @media (min-width: 960px) {
   .about__grid { grid-template-columns: 1fr 1fr; align-items: center; column-gap: 80px; }
