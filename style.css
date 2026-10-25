@@ -146,27 +146,6 @@
   .venn__item:hover .venn__chara { translate: 0 -10px; }
 }
 
-.venn__core {
-  position: absolute;
-  left: 50%;
-  top: 58%;
-  z-index: 3;
-  translate: -50% -50%;
-  display: grid;
-  place-items: center;
-  width: 13%;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: var(--c-base);
-  box-shadow: 0 0 0 3px var(--c-ink);
-  font-family: var(--ff-en);
-  font-weight: 700;
-  font-size: clamp(11px, 1.1vw, 22px);
-  letter-spacing: 0.08em;
-}
-.venn__core.rv { transform: scale(0); }
-.venn__core.rv.is-on { transform: none; transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.9s; }
-
 .venn__spark { position: absolute; width: 4%; color: var(--c-accent); animation: spark 2.4s ease-in-out infinite; }
 .venn__spark--1 { left: 22%; top: 30%; }
 .venn__spark--2 { right: 18%; top: 34%; width: 3%; animation-delay: -0.8s; color: var(--c-ink-soft); }
@@ -236,7 +215,6 @@
   .venn__chara--r { width: 40%; right: -12%; top: 76%; }
   .venn__note { max-width: 46%; letter-spacing: 0; }
   .venn__arrow { top: 15%; }
-  .venn__core { top: 65%; }
 }
 
 @media (min-width: 960px) {
