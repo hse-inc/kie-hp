@@ -621,7 +621,7 @@ select.form__input { appearance: none; padding-right: 48px; }
   .hero-sub__chara { bottom: 40px; }
   .greet__grid { grid-template-columns: 34% 1fr; column-gap: 8%; align-items: center; }
   .strength__list { grid-template-columns: 1fr 1fr; column-gap: var(--sp-b); }
-  .strength__item > :not(.strength__chara) { max-width: 62%; } 
+  .strength__num { max-width: 62%; } 
   .civil__head { grid-template-columns: 34% 1fr; column-gap: 8%; max-width: none; align-items: end; }
   .flow__list { grid-template-columns: repeat(5, 1fr); }
   .svc-row { grid-template-columns: 1.1fr 1fr; column-gap: 8%; }
