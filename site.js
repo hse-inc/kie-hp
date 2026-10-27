@@ -11,6 +11,7 @@
       drawer.classList.toggle('is-open', open);
       btn.setAttribute('aria-expanded', String(open));
       btn.textContent = open ? 'CLOSE' : 'MENU';
+      document.documentElement.classList.toggle('is-locked', open);
     };
     btn.addEventListener('click', () => set(!drawer.classList.contains('is-open')));
     drawer.addEventListener('click', (e) => { if (e.target.closest('a')) set(false); });
