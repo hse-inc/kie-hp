@@ -52,7 +52,7 @@
   document.fonts.ready.then(fit);
   window.addEventListener('resize', fit);
 
-  document.querySelectorAll('main > .sec .sec-head__en').forEach((head) => {
+  if (!document.querySelector('.hero-sub')) document.querySelectorAll('main > .sec .sec-head__en').forEach((head) => {
     const h = document.createElement('span');
     h.className = 'hanko'; h.setAttribute('aria-hidden', 'true'); h.textContent = '喜江';
     head.append(h);
