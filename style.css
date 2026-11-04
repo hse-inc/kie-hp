@@ -320,11 +320,12 @@
 
 .recruit-card__tape {
   position: absolute;
-  left: -2%;
-  right: -2%;
+  left: var(--sp-p); 
+  right: var(--sp-p);
   bottom: 14px;
   display: flex;
   overflow: hidden;
+  border-radius: var(--radius-s);
   padding-block: 8px;
   background: var(--c-accent);
   color: var(--c-ink);
@@ -333,7 +334,6 @@
   font-size: clamp(13px, 1vw, 18px);
   letter-spacing: 0.12em;
   white-space: nowrap;
-  rotate: -2deg;
 }
 .recruit-card__tape span { flex-shrink: 0; padding-right: 0.5em; animation: tape 24s linear infinite; }
 @keyframes tape { to { transform: translateX(-100%); } }
@@ -580,7 +580,7 @@ body::after {
 .contact__tel-num { font-family: var(--ff-en); font-weight: 600; font-size: var(--fs-sub); letter-spacing: 0.04em; }
 .form { display: grid; gap: var(--sp-b); }
 .form__row { display: grid; gap: var(--sp-1); }
-.form__label { display: flex; align-items: center; gap: 0.6em; font-family: var(--ff-head); font-weight: 700; }
+.form__label { display: flex; align-items: center; justify-content: center; gap: 0.6em; text-align: center; font-family: var(--ff-head); font-weight: 700; }
 .form__req { padding: 0 0.7em; border-radius: 999px; background: var(--c-accent); color: var(--c-ink); font-size: var(--fs-small); line-height: 1.7; }
 .form__req--opt { background: var(--c-line); }
 .form__input {
@@ -597,9 +597,10 @@ body::after {
 .form__textarea { min-height: 10em; resize: vertical; }
 .form__select { position: relative; display: block; }
 .form__select::after { content: ""; position: absolute; right: 18px; top: 50%; width: 8px; height: 8px; border-right: 2px solid var(--c-ink); border-bottom: 2px solid var(--c-ink); rotate: 45deg; translate: 0 -70%; pointer-events: none; }
-select.form__input { appearance: none; padding-right: 48px; }
+select.form__input { appearance: none; padding-inline: 48px; text-align: center; text-align-last: center; }
+input.form__input { text-align: center; } 
 .form__submit {
-  justify-self: start;
+  justify-self: center;
   display: inline-flex;
   align-items: center;
   gap: 16px;
