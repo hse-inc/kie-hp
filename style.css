@@ -244,15 +244,8 @@
   border: 2px dashed var(--c-sub-deep);
   overflow: hidden;
 }
-.dog-frame__capsule img { width: 58%; opacity: 0.9; }
-.dog-frame__note {
-  position: absolute;
-  bottom: 14%;
-  padding: 2px 12px;
-  border-radius: 999px;
-  background: var(--c-base);
-  font-size: var(--fs-small);
-}
+.dog-frame__capsule img { width: 70%; }
+.greet__photo .dog-frame__capsule img { width: 50%; }
 
 .recruit-card {
   position: relative;
